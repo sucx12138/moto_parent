@@ -29,15 +29,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class BrowserSecurityConfiguration extends WebSecurityConfigurerAdapter {
-    /**
-     * 重写PasswordEncoder  接口中的方法，实例化加密策略
-     *
-     * @return 返回 BCrypt 加密策略
-     */
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+
 
     /**
      * 注入 自定义的  登录成功处理类
@@ -60,8 +52,13 @@ public class BrowserSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private ValidateCodeFilter validateCodeFilter;
 
+    /**
+     * 重写PasswordEncoder  接口中的方法，实例化加密策略
+     *
+     * @return 返回 BCrypt 加密策略
+     */
     @Bean
-    public BCryptPasswordEncoder getPasswordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 

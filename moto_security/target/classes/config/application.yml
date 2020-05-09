@@ -1,3 +1,5 @@
+server:
+  port: 9011
 # 开发环境配置
 spring:
   profiles:

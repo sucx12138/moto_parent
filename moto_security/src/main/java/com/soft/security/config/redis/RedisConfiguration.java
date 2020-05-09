@@ -1,8 +1,6 @@
 package com.soft.security.config.redis;
 
 import com.alibaba.fastjson.parser.ParserConfig;
-import com.soft.security.config.interceptor.MyBaitsInterceptor;
-import org.apache.ibatis.plugin.Interceptor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
@@ -26,15 +24,6 @@ import java.util.Arrays;
 @EnableCaching
 @Configuration
 public class RedisConfiguration extends CachingConfigurerSupport {
-    /**
-     * 注册mybaits 拦截器 拦截打印完整sql
-     *
-     * @return
-     */
-    @Bean
-    public Interceptor getMyBaitsInterceptor() {
-        return new MyBaitsInterceptor();
-    }
 
     /**
      * 设置 redis 数据默认过期时间，默认1天
