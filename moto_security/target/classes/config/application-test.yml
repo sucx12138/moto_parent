@@ -37,7 +37,7 @@ spring:
       image:
         lebgth: 6
         width: 100
-        url: /auth/login
+        url: /security/auth/login
 
   #redis 配置
   redis:
@@ -56,5 +56,9 @@ spring:
         min-idle: 8
       #连接超时时间
     timeout: 5000
+jwt:
+  secret: secret
+  expiration: 7200000
+  token: Authorization
 user:
   dir: D:\log

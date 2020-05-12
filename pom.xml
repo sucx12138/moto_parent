@@ -6,7 +6,6 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.6.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.soft</groupId>
     <artifactId>moto_parent</artifactId>
@@ -40,12 +39,6 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- myBaits自动生成插件 -->
-        <dependency>
-            <groupId>org.mybatis.generator</groupId>
-            <artifactId>mybatis-generator-core</artifactId>
-            <version>1.3.2</version>
-        </dependency>
         <!-- 测试启动器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -58,8 +51,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
-    </dependencies>
 
+        <!-- myBaits自动生成插件 -->
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -94,4 +93,5 @@
         </resources>
     </build>
 
+    <packaging>pom</packaging>
 </project>

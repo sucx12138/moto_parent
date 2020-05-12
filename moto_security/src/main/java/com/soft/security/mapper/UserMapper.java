@@ -1,6 +1,7 @@
 package com.soft.security.mapper;
 
 
+import com.soft.security.model.SecurityUserDetails;
 import com.soft.security.model.SystemUser;
 import org.springframework.stereotype.Repository;
 
@@ -57,5 +58,5 @@ public interface UserMapper {
      * @param userCode
      * @return
      */
-    SystemUser selectUserByUserCode(String userCode);
+    SecurityUserDetails selectUserByUserCode(String userCode);
 }

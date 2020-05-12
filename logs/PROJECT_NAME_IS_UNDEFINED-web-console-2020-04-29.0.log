@@ -1881,19 +1881,19 @@ Caused by: java.lang.IllegalArgumentException: Mapped Statements collection does
 2020-04-29 11:04:44.106 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-04-29 11:04:44.107 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-04-29 11:04:44.129 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 22 ms
-2020-04-29 11:04:44.306 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/authentication/require
-2020-04-29 11:04:44.306 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:04:44.306 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:04:44.313 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
-2020-04-29 11:04:44.314 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@3f496a50], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@365ac263]
+2020-04-29 11:04:44.306 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/authentication/require
+2020-04-29 11:04:44.306 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:04:44.306 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:04:44.313 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
+2020-04-29 11:04:44.314 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@3f496a50], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@365ac263]
 2020-04-29 11:04:44.332 [http-nio-8080-exec-2] INFO  c.s.security.controller.BrowserSecurityController - 引发跳转的请求是:http://localhost:8080/system/roleMap
-2020-04-29 11:04:44.336 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
+2020-04-29 11:04:44.336 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
 2020-04-29 11:04:50.468 [http-nio-8080-exec-4] INFO  c.s.s.c.handler.MyAuthenticationSuccessHandler - 登录成功
-2020-04-29 11:04:53.449 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleMap
-2020-04-29 11:04:53.449 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:04:53.449 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:04:53.450 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
-2020-04-29 11:04:53.450 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:04:53.449 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleMap
+2020-04-29 11:04:53.449 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:04:53.449 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:04:53.450 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
+2020-04-29 11:04:53.450 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
 2020-04-29 11:04:53.536 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'keyGenerator' available: No matching KeyGenerator bean found for qualifier 'keyGenerator' - neither qualifier match nor bean name match!] with root cause
 org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'keyGenerator' available: No matching KeyGenerator bean found for qualifier 'keyGenerator' - neither qualifier match nor bean name match!
 	at org.springframework.beans.factory.annotation.BeanFactoryAnnotationUtils.qualifiedBeanOfType(BeanFactoryAnnotationUtils.java:136)
@@ -2014,11 +2014,11 @@ org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named '
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2020-04-29 11:05:57.641 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleMap
-2020-04-29 11:05:57.642 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:05:57.643 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:05:57.643 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
-2020-04-29 11:05:57.643 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:05:57.641 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleMap
+2020-04-29 11:05:57.642 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:05:57.643 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:05:57.643 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
+2020-04-29 11:05:57.643 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
 2020-04-29 11:05:57.645 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'keyGenerator' available: No matching KeyGenerator bean found for qualifier 'keyGenerator' - neither qualifier match nor bean name match!] with root cause
 org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'keyGenerator' available: No matching KeyGenerator bean found for qualifier 'keyGenerator' - neither qualifier match nor bean name match!
 	at org.springframework.beans.factory.annotation.BeanFactoryAnnotationUtils.qualifiedBeanOfType(BeanFactoryAnnotationUtils.java:136)
@@ -2290,12 +2290,12 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2020-04-29 11:13:47.093 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-04-29 11:13:47.111 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 17 ms
 2020-04-29 11:13:47.966 [http-nio-8080-exec-1] INFO  c.s.s.c.handler.MyAuthenticationSuccessHandler - 登录成功
-2020-04-29 11:13:51.208 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleMap
-2020-04-29 11:13:51.209 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:13:51.210 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:13:51.213 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
-2020-04-29 11:13:51.214 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
-2020-04-29 11:13:57.703 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=1, name=管理员角色)=SystemRole(code=1, name=管理员角色), SystemRole(code=3, name=普通角色)=SystemRole(code=3, name=普通角色), SystemRole(code=2, name=会员角色)=SystemRole(code=2, name=会员角色)}, status=200, message=select success)
+2020-04-29 11:13:51.208 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleMap
+2020-04-29 11:13:51.209 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:13:51.210 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:13:51.213 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
+2020-04-29 11:13:51.214 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:13:57.703 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=1, name=管理员角色)=SystemRole(code=1, name=管理员角色), SystemRole(code=3, name=普通角色)=SystemRole(code=3, name=普通角色), SystemRole(code=2, name=会员角色)=SystemRole(code=2, name=会员角色)}, status=200, message=select success)
 2020-04-29 11:18:02.742 [SpringContextShutdownHook] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.security.mapper]' package. Please check your configuration.
 2020-04-29 11:18:02.743 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2020-04-29 11:19:29.112 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 11596 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
@@ -2332,13 +2332,13 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2020-04-29 11:19:52.072 [http-nio-8080-exec-2] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:19:52 :select ID, USER_CODE, USER_NAME, PASSWORD, PHONE, ID_CARD, CREATE_TIME, CREATE_USER, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_user where user_code = 'admin'
 2020-04-29 11:19:52.629 [http-nio-8080-exec-2] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:19:52 :SELECT sa.ID, sa.CODE, sa.NAME, sa.CREATE_USER, sa.CREATE_TIME, sa.CREATE_IP, sa.UPDATE_TIME, sa.UPDATE_USER, sa.UPDATE_IP, sa.STATUS, sa.REMARK FROM s_user su INNER JOIN s_user_role sur ON su.id = sur.user_id AND su.STATUS = sur.STATUS INNER JOIN s_role sr ON sur.role_id = sr.id AND sr.STATUS = sur.STATUS INNER JOIN s_role_authority sra ON sra.role_id = sr.id AND sr.STATUS = sra.STATUS INNER JOIN s_authority sa ON sa.id = sra.authority_id AND sa.STATUS = sra.STATUS WHERE su.STATUS = '1' AND su.id = '1'
 2020-04-29 11:19:52.841 [http-nio-8080-exec-2] INFO  c.s.s.c.s.handler.MyAuthenticationSuccessHandler - 登录成功
-2020-04-29 11:19:54.731 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleMap
-2020-04-29 11:19:54.732 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:19:54.733 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:19:54.738 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
-2020-04-29 11:19:54.739 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:19:54.731 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleMap
+2020-04-29 11:19:54.732 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:19:54.733 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:19:54.738 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
+2020-04-29 11:19:54.739 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
 2020-04-29 11:19:54.805 [http-nio-8080-exec-1] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:19:54 :select ID, CODE, NAME,CREATE_USER, CREATE_TIME, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_role
-2020-04-29 11:19:54.815 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=1, name=管理员角色)=SystemRole(code=1, name=管理员角色), SystemRole(code=3, name=普通角色)=SystemRole(code=3, name=普通角色), SystemRole(code=2, name=会员角色)=SystemRole(code=2, name=会员角色)}, status=200, message=select success)
+2020-04-29 11:19:54.815 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=1, name=管理员角色)=SystemRole(code=1, name=管理员角色), SystemRole(code=3, name=普通角色)=SystemRole(code=3, name=普通角色), SystemRole(code=2, name=会员角色)=SystemRole(code=2, name=会员角色)}, status=200, message=select success)
 2020-04-29 11:21:09.437 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-04-29 11:21:09.537 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
 2020-04-29 11:21:23.467 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 1604 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
@@ -2669,50 +2669,50 @@ Consider defining a bean of type 'com.soft.security.mapper.UserMapper' in your c
 2020-04-29 11:31:41.558 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-04-29 11:31:41.559 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-04-29 11:31:41.578 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 19 ms
-2020-04-29 11:31:41.783 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/authentication/require
-2020-04-29 11:31:41.784 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:31:41.784 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:31:41.786 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
-2020-04-29 11:31:41.787 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@4d2526bc], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@6f179ad2]
+2020-04-29 11:31:41.783 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/authentication/require
+2020-04-29 11:31:41.784 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:31:41.784 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:31:41.786 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
+2020-04-29 11:31:41.787 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@4d2526bc], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@6f179ad2]
 2020-04-29 11:31:41.795 [http-nio-8080-exec-1] INFO  c.s.security.controller.BrowserSecurityController - 引发跳转的请求是:http://localhost:8080/system/roleMap
-2020-04-29 11:31:41.796 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
+2020-04-29 11:31:41.796 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
 2020-04-29 11:31:46.440 [http-nio-8080-exec-3] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 2020-04-29 11:31:46.456 [http-nio-8080-exec-3] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:31:46 :select ID, USER_CODE, USER_NAME, PASSWORD, PHONE, ID_CARD, CREATE_TIME, CREATE_USER, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_user where user_code = 'admin'
 2020-04-29 11:31:46.796 [http-nio-8080-exec-3] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:31:46 :SELECT sa.ID, sa.CODE, sa.NAME, sa.CREATE_USER, sa.CREATE_TIME, sa.CREATE_IP, sa.UPDATE_TIME, sa.UPDATE_USER, sa.UPDATE_IP, sa.STATUS, sa.REMARK FROM s_user su INNER JOIN s_user_role sur ON su.id = sur.user_id AND su.STATUS = sur.STATUS INNER JOIN s_role sr ON sur.role_id = sr.id AND sr.STATUS = sur.STATUS INNER JOIN s_role_authority sra ON sra.role_id = sr.id AND sr.STATUS = sra.STATUS INNER JOIN s_authority sa ON sa.id = sra.authority_id AND sa.STATUS = sra.STATUS WHERE su.STATUS = '1' AND su.id = '1'
 2020-04-29 11:31:47.005 [http-nio-8080-exec-3] INFO  c.s.s.c.s.handler.MyAuthenticationSuccessHandler - 登录成功
-2020-04-29 11:31:58.196 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleMap
-2020-04-29 11:31:58.196 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:31:58.196 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:31:58.196 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
-2020-04-29 11:31:58.197 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:31:58.196 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleMap
+2020-04-29 11:31:58.196 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:31:58.196 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:31:58.196 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
+2020-04-29 11:31:58.197 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
 2020-04-29 11:31:58.666 [http-nio-8080-exec-5] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
 2020-04-29 11:31:58.669 [http-nio-8080-exec-5] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
 2020-04-29 11:32:00.379 [http-nio-8080-exec-5] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:32:00 :select ID, CODE, NAME,CREATE_USER, CREATE_TIME, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_role
-2020-04-29 11:32:00.413 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=1, name=管理员角色)=SystemRole(code=1, name=管理员角色), SystemRole(code=3, name=普通角色)=SystemRole(code=3, name=普通角色), SystemRole(code=2, name=会员角色)=SystemRole(code=2, name=会员角色)}, status=200, message=select success)
-2020-04-29 11:32:20.594 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleMap
-2020-04-29 11:32:20.595 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:32:20.595 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:32:20.596 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
-2020-04-29 11:32:20.596 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
-2020-04-29 11:32:20.620 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=2, name=会员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=3, name=普通角色)=null, SystemRole(code=2, name=会员角色)=null, SystemRole(code=3, name=普通角色)=null}, status=200, message=select success)
-2020-04-29 11:32:25.575 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleMap
-2020-04-29 11:32:25.576 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:32:25.576 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:32:25.576 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
-2020-04-29 11:32:25.576 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
-2020-04-29 11:32:25.581 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=2, name=会员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=3, name=普通角色)=null, SystemRole(code=2, name=会员角色)=null, SystemRole(code=3, name=普通角色)=null}, status=200, message=select success)
-2020-04-29 11:32:30.833 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleMap
-2020-04-29 11:32:30.834 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:32:30.834 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:32:30.834 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
-2020-04-29 11:32:30.835 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
-2020-04-29 11:32:30.843 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=2, name=会员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=3, name=普通角色)=null, SystemRole(code=2, name=会员角色)=null, SystemRole(code=3, name=普通角色)=null}, status=200, message=select success)
-2020-04-29 11:33:23.297 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleMap
-2020-04-29 11:33:23.297 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:33:23.297 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:33:23.298 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
-2020-04-29 11:33:23.298 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
-2020-04-29 11:33:35.988 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=2, name=会员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=3, name=普通角色)=null, SystemRole(code=2, name=会员角色)=null, SystemRole(code=3, name=普通角色)=null}, status=200, message=select success)
+2020-04-29 11:32:00.413 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=1, name=管理员角色)=SystemRole(code=1, name=管理员角色), SystemRole(code=3, name=普通角色)=SystemRole(code=3, name=普通角色), SystemRole(code=2, name=会员角色)=SystemRole(code=2, name=会员角色)}, status=200, message=select success)
+2020-04-29 11:32:20.594 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleMap
+2020-04-29 11:32:20.595 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:32:20.595 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:32:20.596 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
+2020-04-29 11:32:20.596 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:32:20.620 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=2, name=会员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=3, name=普通角色)=null, SystemRole(code=2, name=会员角色)=null, SystemRole(code=3, name=普通角色)=null}, status=200, message=select success)
+2020-04-29 11:32:25.575 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleMap
+2020-04-29 11:32:25.576 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:32:25.576 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:32:25.576 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
+2020-04-29 11:32:25.576 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:32:25.581 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=2, name=会员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=3, name=普通角色)=null, SystemRole(code=2, name=会员角色)=null, SystemRole(code=3, name=普通角色)=null}, status=200, message=select success)
+2020-04-29 11:32:30.833 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleMap
+2020-04-29 11:32:30.834 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:32:30.834 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:32:30.834 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
+2020-04-29 11:32:30.835 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:32:30.843 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=2, name=会员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=3, name=普通角色)=null, SystemRole(code=2, name=会员角色)=null, SystemRole(code=3, name=普通角色)=null}, status=200, message=select success)
+2020-04-29 11:33:23.297 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleMap
+2020-04-29 11:33:23.297 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:33:23.297 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:33:23.298 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
+2020-04-29 11:33:23.298 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:33:35.988 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=2, name=会员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=3, name=普通角色)=null, SystemRole(code=2, name=会员角色)=null, SystemRole(code=3, name=普通角色)=null}, status=200, message=select success)
 2020-04-29 11:36:51.492 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-04-29 11:38:00.359 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 2400 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
 2020-04-29 11:38:00.366 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
@@ -2745,21 +2745,21 @@ Consider defining a bean of type 'com.soft.security.mapper.UserMapper' in your c
 2020-04-29 11:38:20.354 [http-nio-8080-exec-2] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:38:20 :select ID, USER_CODE, USER_NAME, PASSWORD, PHONE, ID_CARD, CREATE_TIME, CREATE_USER, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_user where user_code = 'admin'
 2020-04-29 11:38:20.722 [http-nio-8080-exec-2] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:38:20 :SELECT sa.ID, sa.CODE, sa.NAME, sa.CREATE_USER, sa.CREATE_TIME, sa.CREATE_IP, sa.UPDATE_TIME, sa.UPDATE_USER, sa.UPDATE_IP, sa.STATUS, sa.REMARK FROM s_user su INNER JOIN s_user_role sur ON su.id = sur.user_id AND su.STATUS = sur.STATUS INNER JOIN s_role sr ON sur.role_id = sr.id AND sr.STATUS = sur.STATUS INNER JOIN s_role_authority sra ON sra.role_id = sr.id AND sr.STATUS = sra.STATUS INNER JOIN s_authority sa ON sa.id = sra.authority_id AND sa.STATUS = sra.STATUS WHERE su.STATUS = '1' AND su.id = '1'
 2020-04-29 11:38:20.922 [http-nio-8080-exec-2] INFO  c.s.s.c.s.handler.MyAuthenticationSuccessHandler - 登录成功
-2020-04-29 11:38:24.135 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleMap
-2020-04-29 11:38:24.136 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:38:24.136 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:38:24.141 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
-2020-04-29 11:38:24.141 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:38:24.135 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleMap
+2020-04-29 11:38:24.136 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:38:24.136 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:38:24.141 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
+2020-04-29 11:38:24.141 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
 2020-04-29 11:38:24.388 [http-nio-8080-exec-4] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
 2020-04-29 11:38:24.391 [http-nio-8080-exec-4] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
 2020-04-29 11:38:25.974 [http-nio-8080-exec-4] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:38:25 :select ID, CODE, NAME,CREATE_USER, CREATE_TIME, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_role
-2020-04-29 11:38:26.007 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=1, name=管理员角色)=SystemRole(code=1, name=管理员角色), SystemRole(code=3, name=普通角色)=SystemRole(code=3, name=普通角色), SystemRole(code=2, name=会员角色)=SystemRole(code=2, name=会员角色)}, status=200, message=select success)
-2020-04-29 11:38:28.423 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleMap
-2020-04-29 11:38:28.423 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:38:28.424 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:38:28.424 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
-2020-04-29 11:38:28.424 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
-2020-04-29 11:38:28.443 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=2, name=会员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=3, name=普通角色)=null, SystemRole(code=2, name=会员角色)=null, SystemRole(code=3, name=普通角色)=null}, status=200, message=select success)
+2020-04-29 11:38:26.007 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=1, name=管理员角色)=SystemRole(code=1, name=管理员角色), SystemRole(code=3, name=普通角色)=SystemRole(code=3, name=普通角色), SystemRole(code=2, name=会员角色)=SystemRole(code=2, name=会员角色)}, status=200, message=select success)
+2020-04-29 11:38:28.423 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleMap
+2020-04-29 11:38:28.423 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:38:28.424 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:38:28.424 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleMap
+2020-04-29 11:38:28.424 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:38:28.443 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content={SystemRole(code=2, name=会员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=1, name=管理员角色)=null, SystemRole(code=3, name=普通角色)=null, SystemRole(code=2, name=会员角色)=null, SystemRole(code=3, name=普通角色)=null}, status=200, message=select success)
 2020-04-29 11:39:15.490 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2020-04-29 11:39:15.533 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42ms. Found 0 Redis repository interfaces.
 2020-04-29 11:39:15.575 [SpringContextShutdownHook] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.security.mapper]' package. Please check your configuration.
@@ -2794,33 +2794,33 @@ Consider defining a bean of type 'com.soft.security.mapper.UserMapper' in your c
 2020-04-29 11:39:33.924 [http-nio-8080-exec-2] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:39:33 :select ID, USER_CODE, USER_NAME, PASSWORD, PHONE, ID_CARD, CREATE_TIME, CREATE_USER, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_user where user_code = 'admin'
 2020-04-29 11:39:34.163 [http-nio-8080-exec-2] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:39:34 :SELECT sa.ID, sa.CODE, sa.NAME, sa.CREATE_USER, sa.CREATE_TIME, sa.CREATE_IP, sa.UPDATE_TIME, sa.UPDATE_USER, sa.UPDATE_IP, sa.STATUS, sa.REMARK FROM s_user su INNER JOIN s_user_role sur ON su.id = sur.user_id AND su.STATUS = sur.STATUS INNER JOIN s_role sr ON sur.role_id = sr.id AND sr.STATUS = sur.STATUS INNER JOIN s_role_authority sra ON sra.role_id = sr.id AND sr.STATUS = sra.STATUS INNER JOIN s_authority sa ON sa.id = sra.authority_id AND sa.STATUS = sra.STATUS WHERE su.STATUS = '1' AND su.id = '1'
 2020-04-29 11:39:34.371 [http-nio-8080-exec-2] INFO  c.s.s.c.s.handler.MyAuthenticationSuccessHandler - 登录成功
-2020-04-29 11:39:36.901 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleList
-2020-04-29 11:39:36.902 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:39:36.902 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:39:36.904 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
-2020-04-29 11:39:36.905 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:39:36.901 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleList
+2020-04-29 11:39:36.902 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:39:36.902 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:39:36.904 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
+2020-04-29 11:39:36.905 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
 2020-04-29 11:39:37.057 [http-nio-8080-exec-3] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
 2020-04-29 11:39:37.060 [http-nio-8080-exec-3] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
 2020-04-29 11:39:38.724 [http-nio-8080-exec-3] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 11:39:38 :select ID, CODE, NAME,CREATE_USER, CREATE_TIME, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_role
-2020-04-29 11:39:38.740 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=[SystemRole(code=1, name=管理员角色), SystemRole(code=2, name=会员角色), SystemRole(code=3, name=普通角色)], status=200, message=select success)
-2020-04-29 11:39:41.465 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleList
-2020-04-29 11:39:41.466 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:39:41.466 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:39:41.469 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
-2020-04-29 11:39:41.473 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
-2020-04-29 11:39:41.504 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
-2020-04-29 11:39:42.841 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleList
-2020-04-29 11:39:42.842 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:39:42.842 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:39:42.842 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
-2020-04-29 11:39:42.842 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
-2020-04-29 11:39:42.845 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
-2020-04-29 11:39:43.481 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleList
-2020-04-29 11:39:43.481 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 11:39:43.481 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 11:39:43.481 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
-2020-04-29 11:39:43.482 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
-2020-04-29 11:39:43.484 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
+2020-04-29 11:39:38.740 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=[SystemRole(code=1, name=管理员角色), SystemRole(code=2, name=会员角色), SystemRole(code=3, name=普通角色)], status=200, message=select success)
+2020-04-29 11:39:41.465 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleList
+2020-04-29 11:39:41.466 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:39:41.466 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:39:41.469 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
+2020-04-29 11:39:41.473 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:39:41.504 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
+2020-04-29 11:39:42.841 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleList
+2020-04-29 11:39:42.842 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:39:42.842 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:39:42.842 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
+2020-04-29 11:39:42.842 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:39:42.845 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
+2020-04-29 11:39:43.481 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleList
+2020-04-29 11:39:43.481 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 11:39:43.481 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 11:39:43.481 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
+2020-04-29 11:39:43.482 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 11:39:43.484 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
 2020-04-29 14:19:17.049 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 15332 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
 2020-04-29 14:19:17.057 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
 2020-04-29 14:19:20.166 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
@@ -3162,13 +3162,13 @@ Caused by: java.lang.NullPointerException: null
 2020-04-29 14:28:51.006 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-04-29 14:28:51.006 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-04-29 14:28:51.031 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 24 ms
-2020-04-29 14:28:51.242 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/authentication/require
-2020-04-29 14:28:51.243 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 14:28:51.243 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 14:28:51.248 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
-2020-04-29 14:28:51.248 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@22d90291], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@5feaea8a]
+2020-04-29 14:28:51.242 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/authentication/require
+2020-04-29 14:28:51.243 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 14:28:51.243 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 14:28:51.248 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
+2020-04-29 14:28:51.248 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@22d90291], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@5feaea8a]
 2020-04-29 14:28:51.258 [http-nio-8080-exec-5] INFO  c.s.security.controller.BrowserSecurityController - 引发跳转的请求是:http://localhost:8080/system/code/image
-2020-04-29 14:28:51.259 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
+2020-04-29 14:28:51.259 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
 2020-04-29 14:39:25.331 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2020-04-29 14:39:40.529 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 16848 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
 2020-04-29 14:39:40.536 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
@@ -3355,13 +3355,13 @@ com.soft.common.exception.BadRequestException: 自定义
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2020-04-29 14:59:31.921 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/authentication/require
-2020-04-29 14:59:31.922 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 14:59:31.922 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 14:59:31.925 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
-2020-04-29 14:59:31.926 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@32e99d22], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@2f560094]
+2020-04-29 14:59:31.921 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/authentication/require
+2020-04-29 14:59:31.922 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 14:59:31.922 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 14:59:31.925 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
+2020-04-29 14:59:31.926 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@32e99d22], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@2f560094]
 2020-04-29 14:59:31.938 [http-nio-8080-exec-1] INFO  c.s.security.controller.BrowserSecurityController - 引发跳转的请求是:http://localhost:8080/error?username=admin&password=123456
-2020-04-29 14:59:31.940 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
+2020-04-29 14:59:31.940 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
 2020-04-29 14:59:50.133 [http-nio-8080-exec-3] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 14:59:50.133 [http-nio-8080-exec-3] INFO  com.soft.security.filter.ValidateCodeFilter - 验证码不能为空
 2020-04-29 14:59:50.134 [http-nio-8080-exec-3] INFO  c.s.s.c.s.handler.MyAuthenticationFailureHandler - 登录失败
@@ -3417,13 +3417,13 @@ com.soft.common.exception.BadRequestException: 自定义
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2020-04-29 14:59:58.204 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/authentication/require
-2020-04-29 14:59:58.204 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 14:59:58.205 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 14:59:58.205 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
-2020-04-29 14:59:58.205 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@36a01613], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@183f44c1]
+2020-04-29 14:59:58.204 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/authentication/require
+2020-04-29 14:59:58.204 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 14:59:58.205 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 14:59:58.205 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
+2020-04-29 14:59:58.205 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@36a01613], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@183f44c1]
 2020-04-29 14:59:58.205 [http-nio-8080-exec-4] INFO  c.s.security.controller.BrowserSecurityController - 引发跳转的请求是:http://localhost:8080/error?username=admin&password=123456
-2020-04-29 14:59:58.205 [http-nio-8080-exec-4] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
+2020-04-29 14:59:58.205 [http-nio-8080-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
 2020-04-29 15:00:33.686 [http-nio-8080-exec-5] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 15:00:33.687 [http-nio-8080-exec-5] INFO  com.soft.security.filter.ValidateCodeFilter - 验证码不能为空
 2020-04-29 15:00:33.687 [http-nio-8080-exec-5] INFO  c.s.s.c.s.handler.MyAuthenticationFailureHandler - 登录失败
@@ -3479,13 +3479,13 @@ com.soft.common.exception.BadRequestException: 自定义
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2020-04-29 15:00:37.435 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/authentication/require
-2020-04-29 15:00:37.436 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:00:37.436 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:00:37.436 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
-2020-04-29 15:00:37.437 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@f25b3cc], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@275e844e]
+2020-04-29 15:00:37.435 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/authentication/require
+2020-04-29 15:00:37.436 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:00:37.436 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:00:37.436 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
+2020-04-29 15:00:37.437 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@f25b3cc], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@275e844e]
 2020-04-29 15:00:37.437 [http-nio-8080-exec-5] INFO  c.s.security.controller.BrowserSecurityController - 引发跳转的请求是:http://localhost:8080/error?username=admin&password=123456
-2020-04-29 15:00:37.437 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
+2020-04-29 15:00:37.437 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
 2020-04-29 15:03:28.779 [http-nio-8080-exec-9] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 15:03:28.780 [http-nio-8080-exec-9] INFO  com.soft.security.filter.ValidateCodeFilter - 验证码不能为空
 2020-04-29 15:03:28.780 [http-nio-8080-exec-9] INFO  c.s.s.c.s.handler.MyAuthenticationFailureHandler - 登录失败
@@ -3541,13 +3541,13 @@ com.soft.common.exception.BadRequestException: 自定义
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2020-04-29 15:03:31.497 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/authentication/require
-2020-04-29 15:03:31.497 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:03:31.498 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:03:31.498 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
-2020-04-29 15:03:31.499 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@427077fe], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@1bb3d706]
+2020-04-29 15:03:31.497 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/authentication/require
+2020-04-29 15:03:31.497 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:03:31.498 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:03:31.498 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
+2020-04-29 15:03:31.499 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@427077fe], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@1bb3d706]
 2020-04-29 15:03:31.499 [http-nio-8080-exec-8] INFO  c.s.security.controller.BrowserSecurityController - 引发跳转的请求是:http://localhost:8080/error?username=admin&password=123456
-2020-04-29 15:03:31.500 [http-nio-8080-exec-8] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
+2020-04-29 15:03:31.500 [http-nio-8080-exec-8] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
 2020-04-29 15:04:34.505 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-04-29 15:07:41.160 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 5420 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
 2020-04-29 15:07:41.165 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
@@ -3633,13 +3633,13 @@ com.soft.common.exception.BadRequestException: 自定义
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2020-04-29 15:08:07.319 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/authentication/require
-2020-04-29 15:08:07.320 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:08:07.320 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:08:07.324 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
-2020-04-29 15:08:07.325 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@7a2eb904], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@15ac90f4]
+2020-04-29 15:08:07.319 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/authentication/require
+2020-04-29 15:08:07.320 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:08:07.320 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:08:07.324 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
+2020-04-29 15:08:07.325 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@7a2eb904], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@15ac90f4]
 2020-04-29 15:08:07.336 [http-nio-8080-exec-2] INFO  c.s.security.controller.BrowserSecurityController - 引发跳转的请求是:http://localhost:8080/error?username=admin&password=123456
-2020-04-29 15:08:07.337 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
+2020-04-29 15:08:07.337 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
 2020-04-29 15:08:14.516 [http-nio-8080-exec-4] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 15:08:14.517 [http-nio-8080-exec-4] INFO  com.soft.security.filter.ValidateCodeFilter - 验证码不能为空
 2020-04-29 15:08:14.517 [http-nio-8080-exec-4] INFO  c.s.s.c.s.handler.MyAuthenticationFailureHandler - 登录失败
@@ -3695,13 +3695,13 @@ com.soft.common.exception.BadRequestException: 自定义
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2020-04-29 15:08:14.534 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/authentication/require
-2020-04-29 15:08:14.534 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:08:14.534 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:08:14.534 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
-2020-04-29 15:08:14.535 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@21faa6a7], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@4d6ff49b]
+2020-04-29 15:08:14.534 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/authentication/require
+2020-04-29 15:08:14.534 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:08:14.534 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:08:14.534 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
+2020-04-29 15:08:14.535 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@21faa6a7], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@4d6ff49b]
 2020-04-29 15:08:14.535 [http-nio-8080-exec-5] INFO  c.s.security.controller.BrowserSecurityController - 引发跳转的请求是:http://localhost:8080/error?username=admin&password=123456
-2020-04-29 15:08:14.535 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
+2020-04-29 15:08:14.535 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
 2020-04-29 15:09:52.207 [http-nio-8080-exec-7] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.security.mapper]' package. Please check your configuration.
 2020-04-29 15:09:52.208 [http-nio-8080-exec-7] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2020-04-29 15:09:52.249 [http-nio-8080-exec-7] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39ms. Found 0 Redis repository interfaces.
@@ -3711,51 +3711,51 @@ com.soft.common.exception.BadRequestException: 自定义
 2020-04-29 15:10:10.892 [http-nio-8080-exec-9] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 15:10:10.893 [http-nio-8080-exec-9] INFO  com.soft.security.filter.ValidateCodeFilter - 验证码不能为空
 2020-04-29 15:10:10.894 [http-nio-8080-exec-9] INFO  c.s.s.c.s.handler.MyAuthenticationFailureHandler - 登录失败
-2020-04-29 15:11:35.026 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/code/image
-2020-04-29 15:11:35.026 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:11:35.026 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:11:35.027 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
-2020-04-29 15:11:35.027 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@356e837d], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@22a5889]
-2020-04-29 15:11:36.018 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : null
+2020-04-29 15:11:35.026 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/code/image
+2020-04-29 15:11:35.026 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:11:35.026 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:11:35.027 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-04-29 15:11:35.027 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@356e837d], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@22a5889]
+2020-04-29 15:11:36.018 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : null
 2020-04-29 15:17:02.124 [http-nio-8080-exec-5] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.security.mapper]' package. Please check your configuration.
 2020-04-29 15:17:02.125 [http-nio-8080-exec-5] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2020-04-29 15:17:02.145 [http-nio-8080-exec-5] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
-2020-04-29 15:17:02.381 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/code/image
-2020-04-29 15:17:02.381 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:17:02.382 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:17:02.382 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
-2020-04-29 15:17:02.382 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@e4cccf9], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@5f4cd6f6]
-2020-04-29 15:17:02.397 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : null
+2020-04-29 15:17:02.381 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/code/image
+2020-04-29 15:17:02.381 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:17:02.382 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:17:02.382 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-04-29 15:17:02.382 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@e4cccf9], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@5f4cd6f6]
+2020-04-29 15:17:02.397 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : null
 2020-04-29 15:17:58.155 [http-nio-8080-exec-3] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 15:18:14.899 [http-nio-8080-exec-8] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 15:18:26.010 [http-nio-8080-exec-8] INFO  com.soft.security.filter.ValidateCodeFilter - 验证码不存在
 2020-04-29 15:18:34.839 [http-nio-8080-exec-8] INFO  c.s.s.c.s.handler.MyAuthenticationFailureHandler - 登录失败
-2020-04-29 15:18:44.106 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/code/image
-2020-04-29 15:18:44.108 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:18:44.108 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:18:44.109 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
-2020-04-29 15:18:44.109 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@b4fa8bf], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@1be8f62c]
-2020-04-29 15:18:44.125 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : null
+2020-04-29 15:18:44.106 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/code/image
+2020-04-29 15:18:44.108 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:18:44.108 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:18:44.109 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-04-29 15:18:44.109 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@b4fa8bf], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@1be8f62c]
+2020-04-29 15:18:44.125 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : null
 2020-04-29 15:18:52.100 [http-nio-8080-exec-9] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 15:19:07.064 [http-nio-8080-exec-9] INFO  com.soft.security.filter.ValidateCodeFilter - 验证码不匹配codeInSession:2482, codeInRequest:4282
 2020-04-29 15:19:09.741 [http-nio-8080-exec-9] INFO  c.s.s.c.s.handler.MyAuthenticationFailureHandler - 登录失败
-2020-04-29 15:19:15.529 [http-nio-8080-exec-10] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/code/image
-2020-04-29 15:19:15.530 [http-nio-8080-exec-10] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:19:15.530 [http-nio-8080-exec-10] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:19:15.530 [http-nio-8080-exec-10] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
-2020-04-29 15:19:15.530 [http-nio-8080-exec-10] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@67b81c1d], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@58af35a9]
-2020-04-29 15:19:15.542 [http-nio-8080-exec-10] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : null
+2020-04-29 15:19:15.529 [http-nio-8080-exec-10] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/code/image
+2020-04-29 15:19:15.530 [http-nio-8080-exec-10] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:19:15.530 [http-nio-8080-exec-10] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:19:15.530 [http-nio-8080-exec-10] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-04-29 15:19:15.530 [http-nio-8080-exec-10] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@67b81c1d], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@58af35a9]
+2020-04-29 15:19:15.542 [http-nio-8080-exec-10] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : null
 2020-04-29 15:19:41.967 [http-nio-8080-exec-6] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 15:20:54.099 [http-nio-8080-exec-1] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.security.mapper]' package. Please check your configuration.
 2020-04-29 15:20:54.100 [http-nio-8080-exec-1] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2020-04-29 15:20:54.127 [http-nio-8080-exec-1] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
 2020-04-29 15:20:54.388 [http-nio-8080-exec-1] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/auth/login))
-2020-04-29 15:20:54.414 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/code/image
-2020-04-29 15:20:54.415 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:20:54.415 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:20:54.415 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
-2020-04-29 15:20:54.415 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@28e91205], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@1a2421ff]
-2020-04-29 15:20:54.424 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : null
+2020-04-29 15:20:54.414 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/code/image
+2020-04-29 15:20:54.415 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:20:54.415 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:20:54.415 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-04-29 15:20:54.415 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@28e91205], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@1a2421ff]
+2020-04-29 15:20:54.424 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : null
 2020-04-29 15:21:01.647 [http-nio-8080-exec-2] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 15:21:02.669 [http-nio-8080-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 2020-04-29 15:21:02.687 [http-nio-8080-exec-2] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 15:21:02 :select ID, USER_CODE, USER_NAME, PASSWORD, PHONE, ID_CARD, CREATE_TIME, CREATE_USER, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_user where user_code = 'admin'
@@ -3799,12 +3799,12 @@ com.soft.common.exception.BadRequestException: 自定义
 2020-04-29 15:39:05.738 [http-nio-8080-exec-1] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 15:39:05.748 [http-nio-8080-exec-1] INFO  com.soft.security.filter.ValidateCodeFilter - 验证码不存在
 2020-04-29 15:39:05.750 [http-nio-8080-exec-1] INFO  c.s.s.c.s.handler.MyAuthenticationFailureHandler - 登录失败
-2020-04-29 15:39:16.060 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/code/image
-2020-04-29 15:39:16.061 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:39:16.061 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:39:16.067 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
-2020-04-29 15:39:16.068 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@407d199e], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@7ce8be94]
-2020-04-29 15:39:16.335 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : null
+2020-04-29 15:39:16.060 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/code/image
+2020-04-29 15:39:16.061 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:39:16.061 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:39:16.067 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-04-29 15:39:16.068 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@407d199e], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@7ce8be94]
+2020-04-29 15:39:16.335 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : null
 2020-04-29 15:39:20.551 [http-nio-8080-exec-4] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 15:39:20.552 [http-nio-8080-exec-4] INFO  com.soft.security.filter.ValidateCodeFilter - 验证码不匹配codeInSession:2341, codeInRequest:7328
 2020-04-29 15:39:20.553 [http-nio-8080-exec-4] INFO  c.s.s.c.s.handler.MyAuthenticationFailureHandler - 登录失败
@@ -3813,20 +3813,20 @@ com.soft.common.exception.BadRequestException: 自定义
 2020-04-29 15:39:28.340 [http-nio-8080-exec-5] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 15:39:28 :select ID, USER_CODE, USER_NAME, PASSWORD, PHONE, ID_CARD, CREATE_TIME, CREATE_USER, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_user where user_code = 'admin'
 2020-04-29 15:39:28.806 [http-nio-8080-exec-5] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 15:39:28 :SELECT sa.ID, sa.CODE, sa.NAME, sa.CREATE_USER, sa.CREATE_TIME, sa.CREATE_IP, sa.UPDATE_TIME, sa.UPDATE_USER, sa.UPDATE_IP, sa.STATUS, sa.REMARK FROM s_user su INNER JOIN s_user_role sur ON su.id = sur.user_id AND su.STATUS = sur.STATUS INNER JOIN s_role sr ON sur.role_id = sr.id AND sr.STATUS = sur.STATUS INNER JOIN s_role_authority sra ON sra.role_id = sr.id AND sr.STATUS = sra.STATUS INNER JOIN s_authority sa ON sa.id = sra.authority_id AND sa.STATUS = sra.STATUS WHERE su.STATUS = '1' AND su.id = '1'
 2020-04-29 15:39:29.008 [http-nio-8080-exec-5] INFO  c.s.s.c.s.handler.MyAuthenticationSuccessHandler - 登录成功
-2020-04-29 15:40:26.568 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleList
-2020-04-29 15:40:26.568 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:40:26.568 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:40:26.568 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
-2020-04-29 15:40:26.569 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 15:40:26.568 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleList
+2020-04-29 15:40:26.568 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:40:26.568 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:40:26.568 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
+2020-04-29 15:40:26.569 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
 2020-04-29 15:40:27.024 [http-nio-8080-exec-6] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
 2020-04-29 15:40:27.029 [http-nio-8080-exec-6] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
-2020-04-29 15:40:29.280 [http-nio-8080-exec-6] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
-2020-04-29 15:40:32.575 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleList
-2020-04-29 15:40:32.576 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 15:40:32.577 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 15:40:32.577 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
-2020-04-29 15:40:32.577 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
-2020-04-29 15:40:32.582 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
+2020-04-29 15:40:29.280 [http-nio-8080-exec-6] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
+2020-04-29 15:40:32.575 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleList
+2020-04-29 15:40:32.576 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 15:40:32.577 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 15:40:32.577 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
+2020-04-29 15:40:32.577 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 15:40:32.582 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
 2020-04-29 16:24:06.719 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-04-29 16:25:36.208 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 14024 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
 2020-04-29 16:25:36.212 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
@@ -3857,41 +3857,41 @@ com.soft.common.exception.BadRequestException: 自定义
 2020-04-29 16:34:00.757 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-04-29 16:34:00.757 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-04-29 16:34:00.774 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 16 ms
-2020-04-29 16:34:00.914 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/authentication/require
-2020-04-29 16:34:00.914 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 16:34:00.914 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 16:34:00.918 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
-2020-04-29 16:34:00.919 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@451a25d8], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@58a7d6a1]
+2020-04-29 16:34:00.914 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/authentication/require
+2020-04-29 16:34:00.914 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 16:34:00.914 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 16:34:00.918 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
+2020-04-29 16:34:00.919 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@451a25d8], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@58a7d6a1]
 2020-04-29 16:34:00.928 [http-nio-8080-exec-2] INFO  c.s.security.controller.BrowserSecurityController - 引发跳转的请求是:http://localhost:8080/system/roleList
-2020-04-29 16:34:00.929 [http-nio-8080-exec-2] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
+2020-04-29 16:34:00.929 [http-nio-8080-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
 2020-04-29 16:34:05.407 [http-nio-8080-exec-4] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 16:34:05.421 [http-nio-8080-exec-4] INFO  com.soft.security.filter.ValidateCodeFilter - 验证码不存在
 2020-04-29 16:34:05.424 [http-nio-8080-exec-4] INFO  c.s.s.c.s.handler.MyAuthenticationFailureHandler - 登录失败
-2020-04-29 16:34:08.580 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/code/image
-2020-04-29 16:34:08.580 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 16:34:08.581 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 16:34:08.581 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
-2020-04-29 16:34:08.581 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@fc2821e], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@7df308d6]
-2020-04-29 16:34:08.823 [http-nio-8080-exec-3] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : null
-2020-04-29 16:34:14.751 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/code/image
-2020-04-29 16:34:14.751 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 16:34:14.751 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 16:34:14.751 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
-2020-04-29 16:34:14.752 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@1c39cdf0], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@562e288f]
-2020-04-29 16:34:14.761 [http-nio-8080-exec-5] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : null
+2020-04-29 16:34:08.580 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/code/image
+2020-04-29 16:34:08.580 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 16:34:08.581 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 16:34:08.581 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-04-29 16:34:08.581 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@fc2821e], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@7df308d6]
+2020-04-29 16:34:08.823 [http-nio-8080-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : null
+2020-04-29 16:34:14.751 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/code/image
+2020-04-29 16:34:14.751 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 16:34:14.751 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 16:34:14.751 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-04-29 16:34:14.752 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@1c39cdf0], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@562e288f]
+2020-04-29 16:34:14.761 [http-nio-8080-exec-5] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : null
 2020-04-29 16:34:33.861 [http-nio-8080-exec-6] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/auth/login
 2020-04-29 16:34:34.459 [http-nio-8080-exec-6] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 2020-04-29 16:34:34.470 [http-nio-8080-exec-6] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 16:34:34 :select ID, USER_CODE, USER_NAME, PASSWORD, PHONE, ID_CARD, CREATE_TIME, CREATE_USER, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_user where user_code = 'admin'
 2020-04-29 16:34:34.901 [http-nio-8080-exec-6] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-04-29 16:34:34 :SELECT sa.ID, sa.CODE, sa.NAME, sa.CREATE_USER, sa.CREATE_TIME, sa.CREATE_IP, sa.UPDATE_TIME, sa.UPDATE_USER, sa.UPDATE_IP, sa.STATUS, sa.REMARK FROM s_user su INNER JOIN s_user_role sur ON su.id = sur.user_id AND su.STATUS = sur.STATUS INNER JOIN s_role sr ON sur.role_id = sr.id AND sr.STATUS = sur.STATUS INNER JOIN s_role_authority sra ON sra.role_id = sr.id AND sr.STATUS = sra.STATUS INNER JOIN s_authority sa ON sa.id = sra.authority_id AND sa.STATUS = sra.STATUS WHERE su.STATUS = '1' AND su.id = '1'
 2020-04-29 16:34:35.126 [http-nio-8080-exec-6] INFO  c.s.s.c.s.handler.MyAuthenticationSuccessHandler - 登录成功
-2020-04-29 16:34:38.506 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/system/roleList
-2020-04-29 16:34:38.506 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 16:34:38.507 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-29 16:34:38.507 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
-2020-04-29 16:34:38.507 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
+2020-04-29 16:34:38.506 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/system/roleList
+2020-04-29 16:34:38.506 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 16:34:38.507 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-04-29 16:34:38.507 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.RoleController.selectRoleList
+2020-04-29 16:34:38.507 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemRole(code=null, name=null)]
 2020-04-29 16:34:39.067 [http-nio-8080-exec-7] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
 2020-04-29 16:34:39.070 [http-nio-8080-exec-7] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
-2020-04-29 16:34:40.682 [http-nio-8080-exec-7] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
+2020-04-29 16:34:40.682 [http-nio-8080-exec-7] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=[{"code":"1","createIp":"127.0.0.1","createTime":1586931967000,"id":"1","name":"管理员角色","status":1},{"code":"2","createIp":"127.0.0.1","createTime":1586931967000,"id":"2","name":"会员角色","status":1},{"code":"3","createIp":"127.0.0.1","createTime":1586931967000,"id":"3","name":"普通角色","status":1}], status=200, message=select success)
 2020-04-29 16:44:52.938 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2020-04-29 16:44:52.967 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28ms. Found 0 Redis repository interfaces.
 2020-04-29 16:44:52.972 [SpringContextShutdownHook] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.security.mapper]' package. Please check your configuration.
@@ -4140,13 +4140,13 @@ Consider renaming one of the beans or enabling overriding by setting spring.main
 2020-04-29 17:02:00.471 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-04-29 17:02:00.472 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-04-29 17:02:00.489 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 17 ms
-2020-04-29 17:02:00.603 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:8080/authentication/require
-2020-04-29 17:02:00.603 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-29 17:02:00.603 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - IP : 127.0.0.1
-2020-04-29 17:02:00.606 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
-2020-04-29 17:02:00.606 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@5e6c326], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@290a56f9]
+2020-04-29 17:02:00.603 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:8080/authentication/require
+2020-04-29 17:02:00.603 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-04-29 17:02:00.603 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - IP : 127.0.0.1
+2020-04-29 17:02:00.606 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.BrowserSecurityController.requireAuthentication
+2020-04-29 17:02:00.606 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@5e6c326], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@290a56f9]
 2020-04-29 17:02:00.616 [http-nio-8080-exec-1] INFO  c.s.security.controller.BrowserSecurityController - 引发跳转的请求是:http://localhost:8080/system/roleList
-2020-04-29 17:02:00.617 [http-nio-8080-exec-1] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
+2020-04-29 17:02:00.617 [http-nio-8080-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=请选登陆..., status=401, message=无权限访问)
 2020-04-29 17:03:09.824 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-04-29 17:07:44.829 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 17108 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
 2020-04-29 17:07:44.835 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test

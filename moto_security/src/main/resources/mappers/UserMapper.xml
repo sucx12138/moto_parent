@@ -27,7 +27,7 @@
         from s_user
         where ID = #{id,jdbcType=VARCHAR}
     </select>
-    <resultMap id="UserAndRoleResultMap" type="com.soft.security.model.SystemUser" >
+    <resultMap id="UserAndRoleResultMap" type="com.soft.security.model.SecurityUserDetails" >
         <collection property="roles" column="id"  select="com.soft.security.mapper.RoleMapper.selectRoleByUser" >
         </collection>
         <collection property="systemAuthorities" column="id"  select="com.soft.security.mapper.AuthorityMapper.selectAuthorityByUser" >

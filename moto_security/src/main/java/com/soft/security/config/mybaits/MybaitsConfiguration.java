@@ -1,6 +1,6 @@
 package com.soft.security.config.mybaits;
 
-import com.soft.security.config.interceptor.MyBaitsInterceptor;
+import com.soft.common.interceptor.MyBaitsInterceptor;
 import org.apache.ibatis.plugin.Interceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;

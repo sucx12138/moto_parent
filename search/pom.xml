@@ -6,7 +6,6 @@
         <groupId>com.soft</groupId>
         <artifactId>moto_parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.soft</groupId>
     <artifactId>search</artifactId>
@@ -16,25 +15,11 @@
 
 
     <dependencies>
-        <!-- 工具包 -->
+        <!--  -->
         <dependency>
             <groupId>com.soft</groupId>
-            <artifactId>moto_common</artifactId>
+            <artifactId>moto_security</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <!--security-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security.oauth</groupId>
-            <artifactId>spring-security-oauth2</artifactId>
-            <version>2.3.5.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-oauth2</artifactId>
         </dependency>
         <!-- myBaits 启动器 -->
         <dependency>
@@ -87,5 +72,6 @@
             <version>1.1.6.RELEASE</version>
         </dependency>
     </dependencies>
+
 
 </project>

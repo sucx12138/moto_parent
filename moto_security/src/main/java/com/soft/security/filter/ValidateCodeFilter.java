@@ -1,6 +1,8 @@
 package com.soft.security.filter;
 
 
+import com.alibaba.fastjson.JSONObject;
+import com.soft.common.model.ApiError;
 import com.soft.security.config.properties.MySecurityProperties;
 import com.soft.security.config.properties.ValidateCodeProperties;
 import com.soft.security.controller.ValidateCodeController;
@@ -10,7 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
 import org.springframework.social.connect.web.SessionStrategy;
 import org.springframework.stereotype.Component;
@@ -29,6 +30,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
+
 /**
  * @author sucx
  * @projectName moto_parent
@@ -39,11 +42,6 @@ import java.util.Set;
 @Component
 public class ValidateCodeFilter extends OncePerRequestFilter implements InitializingBean {
 
-    /**
-     * 登录失败处理器
-     */
-    @Autowired
-    private AuthenticationFailureHandler failureHandler;
 
     /**
      * Session 对象
@@ -93,14 +91,15 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
         if (action) {
             log.info("拦截成功" + request.getRequestURI());
             //如果是登录请求
+            //验证码校验
             try {
-                //验证码校验
                 validate(new ServletWebRequest(request));
                 //通过校验-放行
                 filterChain.doFilter(request, response);
-            } catch (ValidateCodeException exception) {
-                //返回错误信息给 失败处理器
-                failureHandler.onAuthenticationFailure(request, response, exception);
+            }catch (ValidateCodeException e){
+                ApiError apiError = new ApiError(BAD_REQUEST.value(),e.getMessage());
+                response.setContentType("application/json;charset=UTF-8");
+                response.getWriter().write(JSONObject.toJSONString(apiError));
                 return;
             }
         } else {
@@ -114,7 +113,6 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
         ImageCode codeInSession = (ImageCode) sessionStrategy.getAttribute(request, ValidateCodeController.SESSION_KEY);
         //从request 请求中 取出 验证码
         String codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(), "imageCode");
-
         if (StringUtils.isBlank(codeInRequest)) {
             log.info("验证码不能为空");
             throw new ValidateCodeException("验证码不能为空");

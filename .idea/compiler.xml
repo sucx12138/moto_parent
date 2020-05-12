@@ -2,19 +2,21 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="moto_parent" />
-        <module name="moto_common" />
         <module name="moto_security" />
+        <module name="search" />
+        <module name="moto_common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="moto_common" target="1.8" />
       <module name="moto_parent" target="1.8" />
       <module name="moto_security" target="1.8" />
+      <module name="search" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -22,6 +24,7 @@
       <module name="moto_common" options="-parameters" />
       <module name="moto_parent" options="-parameters" />
       <module name="moto_security" options="-parameters" />
+      <module name="search" options="-parameters" />
     </option>
   </component>
 </project>

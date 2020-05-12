@@ -1,0 +1,3 @@
+2020-05-07 08:40:56.366 [SpringContextShutdownHook] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.security.mapper]' package. Please check your configuration.
+2020-05-07 08:40:56.620 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-07 08:40:56.837 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 193ms. Found 0 Redis repository interfaces.

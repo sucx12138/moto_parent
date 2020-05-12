@@ -1,90 +1,597 @@
-2020-04-30 09:18:02.977 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 4444 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
-2020-04-30 09:18:02.998 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
-2020-04-30 09:18:06.143 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-04-30 09:18:06.152 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-04-30 09:18:06.321 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100ms. Found 0 Redis repository interfaces.
-2020-04-30 09:18:07.808 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 09:18:07.824 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 09:18:07.841 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7272ee51' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 09:18:07.844 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 09:18:07.860 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 09:18:07.878 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.security.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$6177b269] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 09:18:09.342 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2020-04-30 09:18:09.384 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2020-04-30 09:18:09.385 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2020-04-30 09:18:09.386 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-04-30 09:18:09.706 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2020-04-30 09:18:09.706 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6536 ms
-2020-04-30 09:18:09.961 [main] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/auth/login))
-2020-04-30 09:18:10.054 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
-2020-04-30 09:18:10.056 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
-2020-04-30 09:18:13.867 [main] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/auth/login))
-2020-04-30 09:18:14.022 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77648321, org.springframework.security.web.context.SecurityContextPersistenceFilter@61d24347, org.springframework.security.web.header.HeaderWriterFilter@267b678f, org.springframework.security.web.authentication.logout.LogoutFilter@75507e68, com.soft.security.filter.ValidateCodeFilter@64f3991e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@152d2a58, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f78a5ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4edd8a0a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43201f84, org.springframework.security.web.session.SessionManagementFilter@13731ff4, org.springframework.security.web.access.ExceptionTranslationFilter@67baa05, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a34de5e]
-2020-04-30 09:18:14.549 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-30 09:18:15.877 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2020-04-30 09:18:15.955 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2020-04-30 09:18:15.962 [main] INFO  com.soft.security.SecurityApplication - Started SecurityApplication in 15.568 seconds (JVM running for 25.263)
-2020-04-30 09:18:27.712 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-30 14:05:56.183 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 7220 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
-2020-04-30 14:05:56.220 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
-2020-04-30 14:05:58.580 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-04-30 14:05:58.590 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-04-30 14:05:58.714 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74ms. Found 0 Redis repository interfaces.
-2020-04-30 14:06:00.180 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:06:00.187 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:06:00.196 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3e6748ae' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:06:00.198 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:06:00.214 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:06:00.254 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.security.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$360c3004] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:06:01.572 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2020-04-30 14:06:01.601 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2020-04-30 14:06:01.603 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2020-04-30 14:06:01.604 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-04-30 14:06:01.793 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2020-04-30 14:06:01.794 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5433 ms
-2020-04-30 14:06:01.957 [main] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/auth/login))
-2020-04-30 14:06:02.021 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
-2020-04-30 14:06:02.023 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
-2020-04-30 14:06:04.912 [main] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/auth/login))
-2020-04-30 14:06:05.048 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57f83c82, org.springframework.security.web.context.SecurityContextPersistenceFilter@bb38c49, org.springframework.security.web.header.HeaderWriterFilter@638d624a, org.springframework.security.web.authentication.logout.LogoutFilter@129e45eb, com.soft.security.filter.ValidateCodeFilter@432c0f1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@15c3849f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@361483eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5464aeec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7a600e21, org.springframework.security.web.session.SessionManagementFilter@72015156, org.springframework.security.web.access.ExceptionTranslationFilter@48788853, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@630febd7]
-2020-04-30 14:06:05.871 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-30 14:06:07.823 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2020-04-30 14:06:07.907 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2020-04-30 14:06:07.917 [main] INFO  com.soft.security.SecurityApplication - Started SecurityApplication in 14.375 seconds (JVM running for 22.439)
-2020-04-30 14:06:23.327 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-30 14:06:23.328 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2020-04-30 14:06:23.349 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 21 ms
-2020-04-30 14:06:23.488 [http-nio-8080-exec-1] INFO  com.soft.security.aop.ControllerAspect - URL : http://localhost:8080/system/code/image
-2020-04-30 14:06:23.489 [http-nio-8080-exec-1] INFO  com.soft.security.aop.ControllerAspect - HTTP_METHOD : GET
-2020-04-30 14:06:23.489 [http-nio-8080-exec-1] INFO  com.soft.security.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
-2020-04-30 14:06:23.494 [http-nio-8080-exec-1] INFO  com.soft.security.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
-2020-04-30 14:06:23.494 [http-nio-8080-exec-1] INFO  com.soft.security.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@2a592da5], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@61f2ed27]
-2020-04-30 14:06:23.988 [http-nio-8080-exec-1] INFO  com.soft.security.aop.ControllerAspect - RESPONSE : null
-2020-04-30 14:06:35.005 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-30 14:41:07.757 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 5364 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
-2020-04-30 14:41:07.771 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
-2020-04-30 14:41:10.568 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-04-30 14:41:10.576 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2020-04-30 14:41:10.780 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 151ms. Found 0 Redis repository interfaces.
-2020-04-30 14:41:13.229 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:41:13.241 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:41:13.260 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2a136383' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:41:13.263 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:41:13.292 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:41:13.343 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.security.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$b22c4ee0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-30 14:41:15.006 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2020-04-30 14:41:15.048 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2020-04-30 14:41:15.051 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2020-04-30 14:41:15.052 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-04-30 14:41:15.455 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2020-04-30 14:41:15.456 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7429 ms
-2020-04-30 14:41:15.968 [main] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/auth/login))
-2020-04-30 14:41:16.437 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
-2020-04-30 14:41:16.442 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
-2020-04-30 14:41:19.886 [main] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/auth/login))
-2020-04-30 14:41:20.004 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4fe9adfb, org.springframework.security.web.context.SecurityContextPersistenceFilter@634d3439, org.springframework.security.web.header.HeaderWriterFilter@4b74a67a, org.springframework.security.web.authentication.logout.LogoutFilter@110318a7, com.soft.security.filter.ValidateCodeFilter@1de85972, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@42ac309, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71891d6b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d9bccfe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f8fe81e, org.springframework.security.web.session.SessionManagementFilter@3b29d36c, org.springframework.security.web.access.ExceptionTranslationFilter@7aa1fb0e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32121140]
-2020-04-30 14:41:20.839 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-30 14:41:22.551 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2020-04-30 14:41:22.634 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2020-04-30 14:41:22.641 [main] INFO  com.soft.security.SecurityApplication - Started SecurityApplication in 17.324 seconds (JVM running for 30.879)
-2020-04-30 14:45:39.730 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-12 08:56:00.734 [http-nio-9011-exec-5] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.security.mapper]' package. Please check your configuration.
+2020-05-12 08:56:00.773 [http-nio-9011-exec-5] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 08:56:00.842 [http-nio-9011-exec-5] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62ms. Found 0 Redis repository interfaces.
+2020-05-12 08:56:02.910 [http-nio-9011-exec-5] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/security/auth/login))
+2020-05-12 08:56:03.208 [http-nio-9011-exec-5] INFO  com.soft.security.aop.ControllerAspect - URL : http://localhost:9011/security/system/code/image
+2020-05-12 08:56:03.210 [http-nio-9011-exec-5] INFO  com.soft.security.aop.ControllerAspect - HTTP_METHOD : GET
+2020-05-12 08:56:03.210 [http-nio-9011-exec-5] INFO  com.soft.security.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 08:56:03.224 [http-nio-9011-exec-5] INFO  com.soft.security.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-05-12 08:56:03.225 [http-nio-9011-exec-5] INFO  com.soft.security.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@47277ffe], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@419f401]
+2020-05-12 08:56:04.187 [http-nio-9011-exec-5] INFO  com.soft.security.aop.ControllerAspect - RESPONSE : null
+2020-05-12 08:56:18.169 [http-nio-9011-exec-7] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/security/auth/login
+2020-05-12 08:56:19.077 [http-nio-9011-exec-7] INFO  com.soft.security.aop.ControllerAspect - URL : http://localhost:9011/security/auth/login
+2020-05-12 08:56:19.078 [http-nio-9011-exec-7] INFO  com.soft.security.aop.ControllerAspect - HTTP_METHOD : POST
+2020-05-12 08:56:19.078 [http-nio-9011-exec-7] INFO  com.soft.security.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 08:56:19.079 [http-nio-9011-exec-7] INFO  com.soft.security.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.LoginController.login
+2020-05-12 08:56:19.080 [http-nio-9011-exec-7] INFO  com.soft.security.aop.ControllerAspect - REQUEST_ARGS : [SystemUser(userCode=admin, userName=null, password=123456, phone=null, idCard=null, roles=null, systemAuthorities=null)]
+2020-05-12 08:56:20.532 [http-nio-9011-exec-7] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-05-12 08:56:20.578 [http-nio-9011-exec-7] INFO  c.s.security.config.interceptor.MyBaitsInterceptor - 2020-05-12 08:56:20 :select ID, USER_CODE, USER_NAME, PASSWORD, PHONE, ID_CARD, CREATE_TIME, CREATE_USER, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_user where user_code = 'admin'
+2020-05-12 08:56:21.990 [http-nio-9011-exec-7] INFO  com.soft.security.aop.ControllerAspect - RESPONSE : ResponseModel(content=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU4OTI1MjE4MSwiaWF0IjoxNTg5MjQ0OTgxfQ.wEhZhu-a0VrLzyZA3TlZKSVZMrEtRebAwiwPTreugiUS12SpFxQnDGpuvvie7B6jj6BJcIW8UCPZIr8OKG767w, status=200, message=select success)
+2020-05-12 08:58:27.255 [http-nio-9011-exec-10] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.security.mapper]' package. Please check your configuration.
+2020-05-12 08:58:27.256 [http-nio-9011-exec-10] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 08:58:27.275 [http-nio-9011-exec-10] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2020-05-12 08:58:27.480 [http-nio-9011-exec-10] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/security/auth/login
+2020-05-12 08:58:27.480 [http-nio-9011-exec-10] INFO  com.soft.security.filter.ValidateCodeFilter - 验证码不存在
+2020-05-12 08:58:39.768 [http-nio-9011-exec-1] INFO  com.soft.security.aop.ControllerAspect - URL : http://localhost:9011/security/system/code/image
+2020-05-12 08:58:39.768 [http-nio-9011-exec-1] INFO  com.soft.security.aop.ControllerAspect - HTTP_METHOD : GET
+2020-05-12 08:58:39.769 [http-nio-9011-exec-1] INFO  com.soft.security.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 08:58:39.769 [http-nio-9011-exec-1] INFO  com.soft.security.aop.ControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-05-12 08:58:39.769 [http-nio-9011-exec-1] INFO  com.soft.security.aop.ControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@632e6cb5], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@710ecc72]
+2020-05-12 08:58:39.786 [http-nio-9011-exec-1] INFO  com.soft.security.aop.ControllerAspect - RESPONSE : null
+2020-05-12 09:07:52.483 [main] INFO  com.soft.search.SearchApplication - Starting SearchApplication on LAPTOP-GS4QGE3T with PID 6164 (D:\ides_projects\moto_parent\search\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 09:07:52.490 [main] INFO  com.soft.search.SearchApplication - The following profiles are active: test
+2020-05-12 09:07:54.936 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 09:07:54.953 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 09:07:55.215 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73ms. Found 0 Redis repository interfaces.
+2020-05-12 09:07:55.616 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.search.mapper]' package. Please check your configuration.
+2020-05-12 09:07:56.879 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.search.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$19bd4658] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 09:07:58.107 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9012 (http)
+2020-05-12 09:07:58.177 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9012"]
+2020-05-12 09:07:58.178 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 09:07:58.179 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 09:07:58.549 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-12 09:07:58.550 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5920 ms
+2020-05-12 09:07:58.698 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2020-05-12 09:07:58.704 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2020-05-12 09:08:01.282 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-12 09:08:03.160 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9012"]
+2020-05-12 09:08:03.228 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9012 (http) with context path ''
+2020-05-12 09:08:03.236 [main] INFO  com.soft.search.SearchApplication - Started SearchApplication in 13.581 seconds (JVM running for 22.802)
+2020-05-12 09:08:54.164 [http-nio-9012-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-12 09:08:54.164 [http-nio-9012-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-12 09:08:54.187 [http-nio-9012-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 23 ms
+2020-05-12 09:09:57.116 [http-nio-9012-exec-6] INFO  com.soft.common.aop.ControllerAspect - URL : http://localhost:9012/area/all
+2020-05-12 09:09:57.117 [http-nio-9012-exec-6] INFO  com.soft.common.aop.ControllerAspect - HTTP_METHOD : GET
+2020-05-12 09:09:57.117 [http-nio-9012-exec-6] INFO  com.soft.common.aop.ControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 09:09:57.121 [http-nio-9012-exec-6] INFO  com.soft.common.aop.ControllerAspect - CLASS_METHOD : com.soft.search.controller.AreaController.searchArea
+2020-05-12 09:09:57.122 [http-nio-9012-exec-6] INFO  com.soft.common.aop.ControllerAspect - REQUEST_ARGS : []
+2020-05-12 09:09:57.136 [http-nio-9012-exec-6] INFO  com.soft.common.aop.ControllerAspect - RESPONSE : ResponseModel(content=1, status=200, message=查询成功)
+2020-05-12 09:12:00.715 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-12 09:12:00.862 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-05-12 09:15:37.381 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-12 09:16:13.596 [main] INFO  com.soft.search.SearchApplication - Starting SearchApplication on LAPTOP-GS4QGE3T with PID 21716 (D:\ides_projects\moto_parent\search\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 09:16:13.602 [main] INFO  com.soft.search.SearchApplication - The following profiles are active: test
+2020-05-12 09:16:14.895 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 09:16:14.903 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 09:16:14.984 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35ms. Found 0 Redis repository interfaces.
+2020-05-12 09:16:15.199 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.search.mapper]' package. Please check your configuration.
+2020-05-12 09:16:15.692 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.search.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$67d5ac53] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 09:16:16.869 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9012 (http)
+2020-05-12 09:16:16.898 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9012"]
+2020-05-12 09:16:16.900 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 09:16:16.901 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 09:16:17.130 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-12 09:16:17.130 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3416 ms
+2020-05-12 09:16:17.237 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2020-05-12 09:16:17.244 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2020-05-12 09:16:18.309 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-12 09:16:19.201 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9012"]
+2020-05-12 09:16:19.359 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9012 (http) with context path ''
+2020-05-12 09:16:19.371 [main] INFO  com.soft.search.SearchApplication - Started SearchApplication in 7.233 seconds (JVM running for 15.819)
+2020-05-12 09:16:32.605 [http-nio-9012-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-12 09:16:32.615 [http-nio-9012-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-12 09:16:32.628 [http-nio-9012-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-05-12 09:28:23.857 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 09:28:23.876 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2020-05-12 09:28:23.882 [SpringContextShutdownHook] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.search.mapper]' package. Please check your configuration.
+2020-05-12 09:28:24.548 [SpringContextShutdownHook] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void com.soft.search.aop.SearchControllerAspect.webLog()
+2020-05-12 09:28:24.560 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-12 09:28:45.130 [main] INFO  com.soft.search.SearchApplication - Starting SearchApplication on LAPTOP-GS4QGE3T with PID 19092 (D:\ides_projects\moto_parent\search\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 09:28:45.138 [main] INFO  com.soft.search.SearchApplication - The following profiles are active: test
+2020-05-12 09:28:46.190 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'modelAspect' defined in class path resource [com/soft/search/config/common/CommonConfiguration.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=commonConfiguration; factoryMethodName=modelAspect; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/soft/search/config/common/CommonConfiguration.class]] for bean 'modelAspect': There is already [Generic bean: class [com.soft.search.aop.ModelAspect]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\ides_projects\moto_parent\search\target\classes\com\soft\search\aop\ModelAspect.class]] bound.
+2020-05-12 09:28:46.206 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 09:28:46.211 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'modelAspect', defined in class path resource [com/soft/search/config/common/CommonConfiguration.class], could not be registered. A bean with that name has already been defined in file [D:\ides_projects\moto_parent\search\target\classes\com\soft\search\aop\ModelAspect.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2020-05-12 09:29:28.981 [main] INFO  com.soft.search.SearchApplication - Starting SearchApplication on LAPTOP-GS4QGE3T with PID 8592 (D:\ides_projects\moto_parent\search\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 09:29:28.989 [main] INFO  com.soft.search.SearchApplication - The following profiles are active: test
+2020-05-12 09:29:30.273 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 09:29:30.279 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 09:29:30.342 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32ms. Found 0 Redis repository interfaces.
+2020-05-12 09:29:30.542 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.search.mapper]' package. Please check your configuration.
+2020-05-12 09:29:31.414 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.search.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$5204ead6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 09:29:32.535 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9012 (http)
+2020-05-12 09:29:32.558 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9012"]
+2020-05-12 09:29:32.560 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 09:29:32.561 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 09:29:32.765 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-12 09:29:32.765 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3628 ms
+2020-05-12 09:29:32.902 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2020-05-12 09:29:32.908 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2020-05-12 09:29:32.986 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void com.soft.search.aop.SearchControllerAspect.webLog()
+2020-05-12 09:29:35.005 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-12 09:29:36.838 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9012"]
+2020-05-12 09:29:36.889 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9012 (http) with context path ''
+2020-05-12 09:29:36.895 [main] INFO  com.soft.search.SearchApplication - Started SearchApplication in 9.3 seconds (JVM running for 15.83)
+2020-05-12 09:29:37.562 [http-nio-9012-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-12 09:29:37.562 [http-nio-9012-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-12 09:29:37.580 [http-nio-9012-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-05-12 09:29:37.662 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:9012/area/all
+2020-05-12 09:29:37.663 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-05-12 09:29:37.663 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - IP : 127.0.0.1
+2020-05-12 09:29:37.667 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.search.controller.AreaController.searchArea
+2020-05-12 09:29:37.668 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : []
+2020-05-12 09:29:37.680 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=1, status=200, message=查询成功)
+2020-05-12 09:52:35.848 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 09:52:35.891 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40ms. Found 0 Redis repository interfaces.
+2020-05-12 09:52:53.185 [main] INFO  com.soft.search.SearchApplication - Starting SearchApplication on LAPTOP-GS4QGE3T with PID 17164 (D:\ides_projects\moto_parent\search\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 09:52:53.194 [main] INFO  com.soft.search.SearchApplication - The following profiles are active: test
+2020-05-12 09:52:54.665 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 09:52:54.674 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 09:52:54.744 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35ms. Found 0 Redis repository interfaces.
+2020-05-12 09:52:55.758 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.search.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$e2b15c39] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 09:52:56.941 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9012 (http)
+2020-05-12 09:52:56.966 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9012"]
+2020-05-12 09:52:56.968 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 09:52:56.968 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 09:52:57.196 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-12 09:52:57.196 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3884 ms
+2020-05-12 09:52:57.317 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2020-05-12 09:52:57.326 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2020-05-12 09:52:57.409 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void com.soft.search.aop.SearchControllerAspect.webLog()
+2020-05-12 09:52:59.311 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-12 09:53:00.368 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9012"]
+2020-05-12 09:53:00.449 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9012 (http) with context path ''
+2020-05-12 09:53:00.456 [main] INFO  com.soft.search.SearchApplication - Started SearchApplication in 8.759 seconds (JVM running for 16.917)
+2020-05-12 09:53:09.711 [http-nio-9012-exec-2] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 09:53:09.721 [http-nio-9012-exec-2] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2020-05-12 09:53:09.734 [http-nio-9012-exec-2] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.search.mapper]' package. Please check your configuration.
+2020-05-12 09:53:09.767 [http-nio-9012-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-12 09:53:09.767 [http-nio-9012-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-12 09:53:09.787 [http-nio-9012-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 20 ms
+2020-05-12 09:53:09.919 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:9012/area/all
+2020-05-12 09:53:09.920 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-05-12 09:53:09.920 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 09:53:09.924 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.search.controller.AreaController.searchArea
+2020-05-12 09:53:09.925 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : []
+2020-05-12 09:53:10.533 [http-nio-9012-exec-2] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-05-12 09:53:10.555 [http-nio-9012-exec-2] INFO  c.s.search.config.interceptor.MyBaitsInterceptor - 2020-05-12 09:53:10 :select code from oauth_code where code ='1'
+2020-05-12 09:53:10.921 [http-nio-9012-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=null, status=200, message=查询成功)
+2020-05-12 09:53:30.695 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-12 09:53:30.795 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-05-12 09:58:35.085 [main] INFO  com.soft.search.SearchApplication - Starting SearchApplication on LAPTOP-GS4QGE3T with PID 21240 (D:\ides_projects\moto_parent\search\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 09:58:35.094 [main] INFO  com.soft.search.SearchApplication - The following profiles are active: test
+2020-05-12 09:58:36.412 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 09:58:36.416 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 09:58:36.475 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33ms. Found 0 Redis repository interfaces.
+2020-05-12 09:58:37.423 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.search.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$eb813747] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 09:58:38.397 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9012 (http)
+2020-05-12 09:58:38.416 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9012"]
+2020-05-12 09:58:38.417 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 09:58:38.418 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 09:58:38.557 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-12 09:58:38.557 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3343 ms
+2020-05-12 09:58:38.704 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2020-05-12 09:58:38.709 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2020-05-12 09:58:38.808 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void com.soft.search.aop.SearchControllerAspect.webLog()
+2020-05-12 09:58:40.688 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-12 09:58:41.558 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9012"]
+2020-05-12 09:58:41.608 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9012 (http) with context path ''
+2020-05-12 09:58:41.614 [main] INFO  com.soft.search.SearchApplication - Started SearchApplication in 7.835 seconds (JVM running for 16.336)
+2020-05-12 09:58:47.180 [http-nio-9012-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-12 09:58:47.181 [http-nio-9012-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-12 09:58:47.208 [http-nio-9012-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 27 ms
+2020-05-12 09:58:47.328 [http-nio-9012-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:9012/area/all
+2020-05-12 09:58:47.329 [http-nio-9012-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-05-12 09:58:47.329 [http-nio-9012-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 09:58:47.333 [http-nio-9012-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.search.controller.AreaController.searchArea
+2020-05-12 09:58:47.334 [http-nio-9012-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : []
+2020-05-12 09:58:47.720 [http-nio-9012-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-05-12 09:58:47.737 [http-nio-9012-exec-1] INFO  com.soft.common.interceptor.MyBaitsInterceptor - 2020-05-12 09:58:47 :select code from oauth_code where code ='1'
+2020-05-12 09:58:48.022 [http-nio-9012-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=null, status=200, message=查询成功)
+2020-05-12 09:58:53.922 [http-nio-9012-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:9012/area/all
+2020-05-12 09:58:53.923 [http-nio-9012-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-05-12 09:58:53.923 [http-nio-9012-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 09:58:53.924 [http-nio-9012-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.search.controller.AreaController.searchArea
+2020-05-12 09:58:53.924 [http-nio-9012-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : []
+2020-05-12 09:58:53.926 [http-nio-9012-exec-3] INFO  com.soft.common.interceptor.MyBaitsInterceptor - 2020-05-12 09:58:53 :select code from oauth_code where code ='1'
+2020-05-12 09:58:53.929 [http-nio-9012-exec-3] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=null, status=200, message=查询成功)
+2020-05-12 09:59:02.713 [http-nio-9012-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:9012/area/all
+2020-05-12 09:59:02.714 [http-nio-9012-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-05-12 09:59:02.714 [http-nio-9012-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 09:59:02.715 [http-nio-9012-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.search.controller.AreaController.searchArea
+2020-05-12 09:59:02.715 [http-nio-9012-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : []
+2020-05-12 09:59:05.454 [http-nio-9012-exec-4] INFO  com.soft.common.interceptor.MyBaitsInterceptor - 2020-05-12 09:59:05 :select code from oauth_code where code ='1'
+2020-05-12 09:59:05.463 [http-nio-9012-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=null, status=200, message=查询成功)
+2020-05-12 10:02:14.467 [SpringContextShutdownHook] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.search.mapper]' package. Please check your configuration.
+2020-05-12 10:02:14.494 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 10:02:14.505 [SpringContextShutdownHook] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2020-05-12 10:02:33.845 [main] INFO  com.soft.search.SearchApplication - Starting SearchApplication on LAPTOP-GS4QGE3T with PID 20604 (D:\ides_projects\moto_parent\search\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 10:02:33.851 [main] INFO  com.soft.search.SearchApplication - The following profiles are active: test
+2020-05-12 10:02:35.005 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 10:02:35.009 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 10:02:35.063 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30ms. Found 0 Redis repository interfaces.
+2020-05-12 10:02:36.017 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.search.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$9b090038] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:02:37.206 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9012 (http)
+2020-05-12 10:02:37.226 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9012"]
+2020-05-12 10:02:37.227 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 10:02:37.228 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 10:02:37.375 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-12 10:02:37.375 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3432 ms
+2020-05-12 10:02:37.387 [main] ERROR o.s.boot.web.embedded.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'dataSourceConfiguration': Unsatisfied dependency expressed through field 'properties'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.soft.search.config.properties.DruidProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-05-12 10:02:37.446 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-05-12 10:02:37.475 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-05-12 10:02:37.490 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 10:02:37.837 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field properties in com.soft.search.config.database.DataSourceConfiguration required a bean of type 'com.soft.search.config.properties.DruidProperties' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.soft.search.config.properties.DruidProperties' in your configuration.
+
+2020-05-12 10:03:20.690 [main] INFO  com.soft.search.SearchApplication - Starting SearchApplication on LAPTOP-GS4QGE3T with PID 3032 (D:\ides_projects\moto_parent\search\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 10:03:20.698 [main] INFO  com.soft.search.SearchApplication - The following profiles are active: test
+2020-05-12 10:03:21.915 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 10:03:21.921 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 10:03:22.004 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55ms. Found 0 Redis repository interfaces.
+2020-05-12 10:03:22.906 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.search.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$b96cedc0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:03:23.780 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9012 (http)
+2020-05-12 10:03:23.798 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9012"]
+2020-05-12 10:03:23.800 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 10:03:23.800 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 10:03:23.931 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-12 10:03:23.931 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3133 ms
+2020-05-12 10:03:24.042 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2020-05-12 10:03:24.047 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2020-05-12 10:03:24.261 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void com.soft.search.aop.SearchControllerAspect.webLog()
+2020-05-12 10:03:26.124 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-12 10:03:26.983 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9012"]
+2020-05-12 10:03:27.030 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9012 (http) with context path ''
+2020-05-12 10:03:27.036 [main] INFO  com.soft.search.SearchApplication - Started SearchApplication in 7.589 seconds (JVM running for 14.949)
+2020-05-12 10:05:16.015 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-12 10:14:53.310 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 9932 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 10:14:53.326 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
+2020-05-12 10:14:55.614 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 10:14:55.618 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 10:14:55.695 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51ms. Found 0 Redis repository interfaces.
+2020-05-12 10:14:56.295 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+java.lang.NoClassDefFoundError: com/soft/security/utils/JwtTokenUtil
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)
+	at java.lang.Class.getDeclaredConstructors(Class.java:2020)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindConstructorProvider.findConstructorBindingAnnotatedConstructor(ConfigurationPropertiesBindConstructorProvider.java:62)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindConstructorProvider.getBindConstructor(ConfigurationPropertiesBindConstructorProvider.java:48)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBean$BindMethod.forType(ConfigurationPropertiesBean.java:311)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBeanDefinitionValidator.validate(ConfigurationPropertiesBeanDefinitionValidator.java:63)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBeanDefinitionValidator.postProcessBeanFactory(ConfigurationPropertiesBeanDefinitionValidator.java:45)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:532)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.soft.security.SecurityApplication.main(SecurityApplication.java:14)
+Caused by: java.lang.ClassNotFoundException: com.soft.security.utils.JwtTokenUtil
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 21 common frames omitted
+2020-05-12 10:16:10.495 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 5516 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 10:16:10.506 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
+2020-05-12 10:16:11.904 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 10:16:11.909 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 10:16:11.988 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53ms. Found 0 Redis repository interfaces.
+2020-05-12 10:16:13.317 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:16:13.365 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:16:13.379 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@120df990' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:16:13.384 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:16:13.411 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:16:13.429 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.security.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$6eea8e56] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:16:14.273 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9011 (http)
+2020-05-12 10:16:14.293 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9011"]
+2020-05-12 10:16:14.294 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 10:16:14.294 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 10:16:14.429 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/security] - Initializing Spring embedded WebApplicationContext
+2020-05-12 10:16:14.429 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3805 ms
+2020-05-12 10:16:15.331 [main] ERROR o.s.boot.web.embedded.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthorizationTokenFilter' defined in file [D:\ides_projects\moto_parent\moto_security\target\classes\com\soft\security\filter\JwtAuthorizationTokenFilter.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.soft.common.utils.JwtTokenUtil' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-05-12 10:16:15.405 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-05-12 10:16:15.435 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-05-12 10:16:15.453 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 10:16:15.658 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.soft.security.filter.JwtAuthorizationTokenFilter required a bean of type 'com.soft.common.utils.JwtTokenUtil' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.soft.common.utils.JwtTokenUtil' in your configuration.
+
+2020-05-12 10:19:14.503 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 17396 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 10:19:14.510 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
+2020-05-12 10:19:16.488 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 10:19:16.497 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 10:19:16.664 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 108ms. Found 0 Redis repository interfaces.
+2020-05-12 10:19:17.745 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:17.753 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:17.761 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@716f94c1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:17.764 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:17.783 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:17.806 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.security.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$c09a4fa5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:18.681 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9011 (http)
+2020-05-12 10:19:18.699 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9011"]
+2020-05-12 10:19:18.700 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 10:19:18.701 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 10:19:18.841 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/security] - Initializing Spring embedded WebApplicationContext
+2020-05-12 10:19:18.841 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4206 ms
+2020-05-12 10:19:19.732 [main] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/security/auth/login))
+2020-05-12 10:19:19.775 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2020-05-12 10:19:19.777 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2020-05-12 10:19:19.842 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void com.soft.security.aop.SecurityControllerAspect.webLog()
+2020-05-12 10:19:20.294 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loginController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.soft.security.controller.LoginController] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+2020-05-12 10:19:20.304 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-05-12 10:19:20.349 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 10:19:20.371 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loginController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.soft.security.controller.LoginController] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1286)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1201)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:550)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.soft.security.SecurityApplication.main(SecurityApplication.java:14)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.soft.security.controller.LoginController] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/soft/security/utils/JwtTokenUtil
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 22 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.soft.security.utils.JwtTokenUtil
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 26 common frames omitted
+2020-05-12 10:19:52.724 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 12372 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 10:19:52.733 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
+2020-05-12 10:19:54.047 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 10:19:54.052 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 10:19:54.138 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54ms. Found 0 Redis repository interfaces.
+2020-05-12 10:19:55.049 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:55.056 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:55.063 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@23ad2d17' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:55.066 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:55.080 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:55.097 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.security.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$cc96d294] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:19:55.961 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9011 (http)
+2020-05-12 10:19:55.979 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9011"]
+2020-05-12 10:19:55.980 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 10:19:55.981 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 10:19:56.120 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/security] - Initializing Spring embedded WebApplicationContext
+2020-05-12 10:19:56.121 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3287 ms
+2020-05-12 10:19:57.006 [main] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/security/auth/login))
+2020-05-12 10:19:57.050 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2020-05-12 10:19:57.053 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2020-05-12 10:19:57.160 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void com.soft.security.aop.SecurityControllerAspect.webLog()
+2020-05-12 10:19:58.745 [main] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/security/auth/login))
+2020-05-12 10:19:58.856 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e782401, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d60bd5a, org.springframework.security.web.header.HeaderWriterFilter@64f613da, org.springframework.security.web.authentication.logout.LogoutFilter@2bc0603f, com.soft.security.filter.ValidateCodeFilter@c1a74d, com.soft.security.filter.JwtAuthorizationTokenFilter@6e017950, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13f7c165, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34001c5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2bb84aa5, org.springframework.security.web.session.SessionManagementFilter@5d01a2eb, org.springframework.security.web.access.ExceptionTranslationFilter@515fff35, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1abea1ed]
+2020-05-12 10:19:59.210 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-12 10:20:00.221 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9011"]
+2020-05-12 10:20:00.266 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9011 (http) with context path '/security'
+2020-05-12 10:20:00.272 [main] INFO  com.soft.security.SecurityApplication - Started SecurityApplication in 8.732 seconds (JVM running for 16.05)
+2020-05-12 10:20:11.296 [http-nio-9011-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/security] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-12 10:20:11.296 [http-nio-9011-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-12 10:20:11.325 [http-nio-9011-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 29 ms
+2020-05-12 10:20:11.491 [http-nio-9011-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:9011/security/system/code/image
+2020-05-12 10:20:11.492 [http-nio-9011-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-05-12 10:20:11.492 [http-nio-9011-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 10:20:11.497 [http-nio-9011-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-05-12 10:20:11.498 [http-nio-9011-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@7745ba05], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@68553ac0]
+2020-05-12 10:20:12.172 [http-nio-9011-exec-1] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : null
+2020-05-12 10:20:26.141 [http-nio-9011-exec-4] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/security/auth/login
+2020-05-12 10:20:26.452 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:9011/security/auth/login
+2020-05-12 10:20:26.452 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : POST
+2020-05-12 10:20:26.453 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 10:20:26.453 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.LoginController.login
+2020-05-12 10:20:26.453 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemUser(userCode=admin, userName=null, password=123456, phone=null, idCard=null, roles=null, systemAuthorities=null)]
+2020-05-12 10:20:36.711 [http-nio-9011-exec-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-05-12 10:20:36.725 [http-nio-9011-exec-4] INFO  com.soft.common.interceptor.MyBaitsInterceptor - 2020-05-12 10:20:36 :select ID, USER_CODE, USER_NAME, PASSWORD, PHONE, ID_CARD, CREATE_TIME, CREATE_USER, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_user where user_code = 'admin'
+2020-05-12 10:20:37.402 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1ODkyNTcyMzcsInN1YiI6ImFkbWluIiwiaWF0IjoxNTg5MjUwMDM3fQ.G9dBG9_ukCoi7IK8IHFK9rGS8rAr3ve4grsa-24-lqNQOy-CU1IYF5S3lK0gBWS4jmJJ8KWXTYa6a7YAsQnlQA, status=200, message=select success)
+2020-05-12 10:20:54.005 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-12 10:21:12.335 [main] INFO  com.soft.security.SecurityApplication - Starting SecurityApplication on LAPTOP-GS4QGE3T with PID 17660 (D:\ides_projects\moto_parent\moto_security\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 10:21:12.341 [main] INFO  com.soft.security.SecurityApplication - The following profiles are active: test
+2020-05-12 10:21:13.715 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 10:21:13.720 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 10:21:13.815 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52ms. Found 0 Redis repository interfaces.
+2020-05-12 10:21:14.809 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:21:14.818 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:21:14.830 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3de79067' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:21:14.832 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:21:14.848 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:21:14.869 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.security.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$f2a46746] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:21:15.743 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9011 (http)
+2020-05-12 10:21:15.762 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9011"]
+2020-05-12 10:21:15.763 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 10:21:15.764 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 10:21:15.905 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/security] - Initializing Spring embedded WebApplicationContext
+2020-05-12 10:21:15.906 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3448 ms
+2020-05-12 10:21:16.838 [main] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/security/auth/login))
+2020-05-12 10:21:16.886 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2020-05-12 10:21:16.888 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2020-05-12 10:21:16.977 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void com.soft.security.aop.SecurityControllerAspect.webLog()
+2020-05-12 10:21:18.084 [main] INFO  com.soft.security.filter.ValidateCodeFilter - ValidateCodeProperties(image=ImageCodeProperties(width=100, height=23, length=4, expireIn=60, url=/security/auth/login))
+2020-05-12 10:21:18.169 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f2a1ff0, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e7e4480, org.springframework.security.web.header.HeaderWriterFilter@12dc702b, org.springframework.security.web.authentication.logout.LogoutFilter@92b1bda, com.soft.security.filter.ValidateCodeFilter@1a67f8b4, com.soft.security.filter.JwtAuthorizationTokenFilter@7b2e931, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d99d327, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3809f65d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@647ce968, org.springframework.security.web.session.SessionManagementFilter@2552181d, org.springframework.security.web.access.ExceptionTranslationFilter@320efff5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@282aea3c]
+2020-05-12 10:21:18.545 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-12 10:21:19.516 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9011"]
+2020-05-12 10:21:19.561 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9011 (http) with context path '/security'
+2020-05-12 10:21:19.567 [main] INFO  com.soft.security.SecurityApplication - Started SecurityApplication in 8.44 seconds (JVM running for 18.891)
+2020-05-12 10:21:21.693 [http-nio-9011-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/security] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-12 10:21:21.693 [http-nio-9011-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-12 10:21:21.710 [http-nio-9011-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+2020-05-12 10:21:21.798 [http-nio-9011-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:9011/security/system/code/image
+2020-05-12 10:21:21.798 [http-nio-9011-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : GET
+2020-05-12 10:21:21.798 [http-nio-9011-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 10:21:21.802 [http-nio-9011-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.ValidateCodeController.createCode
+2020-05-12 10:21:21.802 [http-nio-9011-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@46c8d542], com.alibaba.druid.support.http.WebStatFilter$StatHttpServletResponseWrapper@4e9c128c]
+2020-05-12 10:21:22.136 [http-nio-9011-exec-2] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : null
+2020-05-12 10:21:31.490 [http-nio-9011-exec-4] INFO  com.soft.security.filter.ValidateCodeFilter - 拦截成功/security/auth/login
+2020-05-12 10:21:31.732 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - URL : http://localhost:9011/security/auth/login
+2020-05-12 10:21:31.732 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - HTTP_METHOD : POST
+2020-05-12 10:21:31.732 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - IP : 0:0:0:0:0:0:0:1
+2020-05-12 10:21:31.732 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - CLASS_METHOD : com.soft.security.controller.LoginController.login
+2020-05-12 10:21:31.733 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - REQUEST_ARGS : [SystemUser(userCode=admin, userName=null, password=123456, phone=null, idCard=null, roles=null, systemAuthorities=null)]
+2020-05-12 10:21:39.287 [http-nio-9011-exec-4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-05-12 10:21:39.300 [http-nio-9011-exec-4] INFO  com.soft.common.interceptor.MyBaitsInterceptor - 2020-05-12 10:21:39 :select ID, USER_CODE, USER_NAME, PASSWORD, PHONE, ID_CARD, CREATE_TIME, CREATE_USER, CREATE_IP, UPDATE_TIME, UPDATE_USER, UPDATE_IP, STATUS, REMARK from s_user where user_code = 'admin'
+2020-05-12 10:21:39.817 [http-nio-9011-exec-4] INFO  com.soft.common.aop.CommonControllerAspect - RESPONSE : ResponseModel(content=eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1ODkyNTcyOTksInN1YiI6ImFkbWluIiwiaWF0IjoxNTg5MjUwMDk5fQ.7L7sqHS3P8WkEei16j1sDbuZae4pBI-7-jyfRW6MWjkSJI5SZKAGl8zhoRl4Xd3-wmsrNHgIe4mK-kTEmMJOjg, status=200, message=select success)
+2020-05-12 10:32:34.641 [main] INFO  com.soft.search.SearchApplication - Starting SearchApplication on LAPTOP-GS4QGE3T with PID 14588 (D:\ides_projects\moto_parent\search\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 10:32:34.647 [main] INFO  com.soft.search.SearchApplication - The following profiles are active: test
+2020-05-12 10:32:37.028 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 10:32:37.036 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 10:32:37.158 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57ms. Found 0 Redis repository interfaces.
+2020-05-12 10:32:39.422 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfiguration' of type [com.soft.search.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$d61a14a9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-12 10:32:41.294 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9012 (http)
+2020-05-12 10:32:41.443 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9012"]
+2020-05-12 10:32:41.450 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 10:32:41.452 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 10:32:42.295 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-12 10:32:42.296 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7506 ms
+2020-05-12 10:32:42.615 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+2020-05-12 10:32:42.622 [main] INFO  o.s.boot.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+2020-05-12 10:32:43.227 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void com.soft.search.aop.SearchControllerAspect.webLog()
+2020-05-12 10:32:45.269 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtTokenUtil': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
+2020-05-12 10:32:45.288 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-05-12 10:32:45.428 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 10:32:45.613 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtTokenUtil': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:550)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.soft.search.SearchApplication.main(SearchApplication.java:10)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:236)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:909)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1231)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 19 common frames omitted
+2020-05-12 10:35:00.090 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-12 10:35:15.440 [main] INFO  com.soft.search.SearchApplication - Starting SearchApplication on LAPTOP-GS4QGE3T with PID 22144 (D:\ides_projects\moto_parent\search\target\classes started by sucx in D:\ides_projects\moto_parent)
+2020-05-12 10:35:15.449 [main] INFO  com.soft.search.SearchApplication - The following profiles are active: test
+2020-05-12 10:35:16.811 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-12 10:35:16.817 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-12 10:35:16.864 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2020-05-12 10:35:17.121 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.soft.search]' package. Please check your configuration.
+2020-05-12 10:35:18.362 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9012 (http)
+2020-05-12 10:35:18.389 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9012"]
+2020-05-12 10:35:18.391 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-12 10:35:18.392 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 10:35:18.603 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-12 10:35:18.604 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3030 ms
+2020-05-12 10:35:18.778 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'areaController': Unsatisfied dependency expressed through field 'areaService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'areaServiceImpl': Unsatisfied dependency expressed through field 'oauthCodeMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.soft.search.mapper.OauthCodeMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-05-12 10:35:18.786 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-05-12 10:35:18.826 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-12 10:35:19.258 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field oauthCodeMapper in com.soft.search.service.impl.AreaServiceImpl required a bean of type 'com.soft.search.mapper.OauthCodeMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.soft.search.mapper.OauthCodeMapper' in your configuration.
+
